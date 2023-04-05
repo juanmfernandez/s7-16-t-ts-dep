@@ -54,7 +54,7 @@ export const register = async (req: Request, res: Response) => {
         await newUser.save();
 
         let welcomeTemplate = welcome(firstName, lastName);
-        sendEmail(email, "Vienvenido a SmartShop", welcomeTemplate)
+        sendEmail(email, "Bienvenido a SmartShop", welcomeTemplate)
 
         res.status(200).send({
             error: false,
