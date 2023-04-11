@@ -36,8 +36,10 @@ export class User {
   @prop()
   public carts: [
     {
-      type: mongoose.Schema.Types.ObjectId;
-      ref: () => Cart;
+      cartId: {
+        type: mongoose.Schema.Types.ObjectId;
+        ref: 'Cart';
+      };
     },
   ];
 

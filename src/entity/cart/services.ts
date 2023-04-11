@@ -13,8 +13,11 @@ export async function createCart(userId: mongoose.Schema.Types.ObjectId) {
   });
 
   await newCart.save();
-  user?.carts.push(newCart._id);
-  await user?.save();
+  // console.log(newCart._id, typeof(newCart._id));
+  // const objectId = new ObjectId(newCart._id.toString());
+  // const cartToAdd = {cartId: {type: objectId, ref: Cart}}
+  // user?.carts.push(cartToAdd);
+  // await user?.save();
 }
 
 export async function getCarts() {
