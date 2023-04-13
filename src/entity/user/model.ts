@@ -21,7 +21,7 @@ export class User {
   @prop({ required: true })
   public lastName!: string;
 
-  @prop({ required: true, default: "https://firebasestorage.googleapis.com/v0/b/c8t54pern.appspot.com/o/images%2Fprofilepics%2Fuser-profile-default.png?alt=media&token=5471edc9-7ce7-42e5-8c62-b70f05d7703f" })
+  @prop({ required: true, default: process.env.DEF_PROFILE_PIC })
   public photo!: string;
 
   @prop({ required: true })
