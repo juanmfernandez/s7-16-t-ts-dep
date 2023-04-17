@@ -6,11 +6,12 @@ import { requireUser } from '../../middleware';
 
 const router = express.Router();
 
-router.use(requireUser);
 
 router.get('/', getBusinessListHandler);
 
 router.get('/:businessId', getBusinessHandler);
+
+router.use(requireUser);
 
 router.post('/', newBusinessHandler);
 
